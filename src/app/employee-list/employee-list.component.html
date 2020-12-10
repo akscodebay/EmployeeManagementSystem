@@ -1,0 +1,31 @@
+<div id="emplist">
+	<h1 id="emplist_header">Employee List</h1>
+	<label  id="filter_label">Filter by:</label>
+  <input id="filter" [(ngModel)]="searchText" placeholder="Employee Name">
+
+  <label id="count">
+    Total Number of Employees:&nbsp;&nbsp;{{globals.empcount}}
+  </label>
+
+  <table id="table">
+  <tr>
+    <th>Emp ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let employee of employees | filter : searchText;let i = index">
+    <td id="{{i+1}}"><a routerLink="details/{{employee.id}}">{{ employee.id }}</a></td>
+    <td id="name{{i}}">{{ employee.name | uppercase }}</td>
+    <td id="loc{{i}}">{{ employee.location }}</td>
+    <td id="email{{i}}">{{ employee.email}}</td>
+    <td id="mob{{i}}" >{{employee.mobile}}</td>
+    <td><a routerLink="update" (click)="setId(employee.id)">Edit{{employee.id}}</a></td>
+    <td><a routerLink="deleteEmployee/{{employee.id}}" >Delete{{employee.id}}</a></td>
+  </tr>
+</table>
+
+</div>

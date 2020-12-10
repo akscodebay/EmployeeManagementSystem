@@ -1,0 +1,67 @@
+<h1>Add Employee</h1>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit(addForm)" novalidate>
+	<label>
+    Employee Name:
+    <input  id="name" type="text" formControlName="empName"  required>
+  </label>
+  <div *ngIf="addForm.controls.empName.invalid && (addForm.controls.empName.dirty || addForm.controls.empName.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="addForm.controls.empName.errors.required">
+    Name is required.
+  </div>
+  <div *ngIf="addForm.controls.empName.errors.minlength">
+    Name must be at least 3 characters long.
+  </div>
+   <div *ngIf="addForm.controls.empName.errors.pattern">
+    Name must contain only alphabets.
+  </div>
+</div>
+<br>
+  <label>
+    Location:
+    <input id="location" type="text" formControlName="location" required>
+  </label>
+  <div *ngIf="addForm.controls.location.invalid && (addForm.controls.location.dirty || addForm.controls.location.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="addForm.controls.location.errors.required">
+    Location is required.
+  </div>
+  </div>
+<br>
+  <label>
+    Email:
+    <input id="email" type="text" formControlName="email" required>
+  </label>
+  <div *ngIf="addForm.controls.email.invalid && (addForm.controls.email.dirty || addForm.controls.email.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="addForm.controls.email.errors.required">
+    Email is required.
+  </div>
+  </div>
+<br>
+  <label>
+    Mobile:
+    <input id="mobile" type="text" formControlName="mobile" required>
+  </label>
+  <div *ngIf="addForm.controls.mobile.invalid && (addForm.controls.mobile.dirty || addForm.controls.mobile.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="addForm.controls.mobile.errors.required">
+    Mobile number is required.
+  </div>
+  <div *ngIf="addForm.controls.mobile.errors.minlength">
+    Mobile number must be at least 8 characters long.
+  </div>
+  <div *ngIf="addForm.controls.mobile.errors.maxlength">
+    Mobile number must be at most 10 characters long.
+  </div>
+  <div *ngIf="addForm.controls.mobile.errors.pattern">
+    Mobile should only consist of number.
+  </div>
+  </div>
+<br>
+<button id="add" [disabled]="!addForm.valid">Submit</button>
+</form>

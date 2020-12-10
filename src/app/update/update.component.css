@@ -1,0 +1,17 @@
+form{
+  font-family: Lato;
+  margin: 10px 500px;
+  align-content: center;
+}
+
+h1{
+  font-family: Lato;
+  margin-top: 100px;
+  text-align: center;
+}
+
+button{
+  font-family: Lato;
+  margin-left: 100px;
+  margin-top: 10px;
+}

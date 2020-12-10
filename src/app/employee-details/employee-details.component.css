@@ -1,0 +1,14 @@
+div, p{
+   font-family: Lato;
+}
+#empdetails{
+  margin-top: 100px;
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+#button{
+  margin-left: 650px;
+}

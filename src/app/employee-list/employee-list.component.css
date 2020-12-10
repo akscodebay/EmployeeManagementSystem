@@ -1,0 +1,34 @@
+div{
+   font-family: Lato;
+}
+#emplist_header{
+  margin-top: 100px;
+  text-align: center;
+}
+
+#filter{
+  text-align: center;
+}
+
+#filter_label{
+   margin-left: 300px;
+   padding: 10px 10px 10px 10px;
+}
+
+#count{
+margin-left: 180px;
+}
+
+#table{
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  border: 1;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  background: rgb(210, 233, 81);
+}
+
